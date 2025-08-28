@@ -1,5 +1,5 @@
 import { UserRound, MonitorCog, Contact, FileCode2} from "lucide-react";
-import { Logo } from "./default/Logo";
+import { Logo } from "../default/Logo";
 
 export function Navbar() {
   return (
