@@ -4,6 +4,8 @@ import { Navbar } from "./home/Navbar";
 import { useEffect } from "react";
 import { AnimatePresence } from "motion/react";
 import { SectionObserver } from "./navigation/SectionObserver";
+import { SectionBarItem } from "./navigation/SectionBarItem";
+import { SectionBar } from "./navigation/SectionBar";
 
 export const MainContainer = () => {
   useEffect(() => {
@@ -18,6 +20,7 @@ export const MainContainer = () => {
             <Navbar/>
           </div>
         </SectionObserver>
+        <SectionBar/>
       </main>
     </AnimatePresence>
   );
