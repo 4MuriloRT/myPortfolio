@@ -6,6 +6,7 @@ import { SectionBarItem } from "./SectionBarItem";
 import { useSectionStore } from "../stores/useSectionStore";
 import { Section } from "../types/Section";
 import { motion } from "motion/react";
+import { slowFadeInRight } from "@/animations/fadeIn";
 
 export const SectionBar = () => {
   const { currentSection, setCurrentSection } = useSectionStore();
@@ -25,6 +26,7 @@ export const SectionBar = () => {
     <motion.div
       initial="hidden"
       animate="visible"
+      variants={slowFadeInRight}
       className=" hidden fixed z-50 bottom-4 right-2 text-primary flex-col justify-center lg:flex"
     >
       <div

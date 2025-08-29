@@ -3,31 +3,42 @@ import { sections } from "../data/sections";
 import { useSectionStore } from "../stores/useSectionStore";
 import { Logo } from "../default/Logo";
 import { NavItem } from "../navigation/NavItem";
+import { motion } from "framer-motion";
+import { slowFadeInLeft } from "@/animations/fadeIn";
 
 export const Navbar = () => {
   const { currentSection, setCurrentSection } = useSectionStore();
-  const handleScrollToSection = (sectionId: Section['id']) => {
-        setCurrentSection(sectionId);
 
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+  const handleScrollToSection = (sectionId: Section["id"]) => {
+    setCurrentSection(sectionId);
+
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container h-20 flex items-center justify-between mx-auto px-4">
-        <Logo/>
-        <nav className="hidden md:flex space-x-7 text-2xl font-medium">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full lg:static border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={slowFadeInLeft}
+        className="flex items-center justify-between transition-all ease-in"
+      >
+        <div className="h-20 flex items-center mx-auto px-4">
+          <Logo />
+        </div>
+        <nav className="flex items-center space-x-7 mx-auto">
           {sections.map((section, index) => (
-            <NavItem 
+            <NavItem
               key={index}
               section={section}
               onClick={handleScrollToSection}
             />
           ))}
         </nav>
-      </div>
+      </motion.div>
     </header>
   );
-}
+};
