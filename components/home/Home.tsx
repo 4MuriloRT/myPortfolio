@@ -5,12 +5,12 @@ import { fadeInUp, slowFadeInLeft } from "@/animations/fadeIn";
 export const Home = () => {
   return (
     <div className="flex relative w-full h-full lg:h-[calc(100vh-90px)] bg-blue-400 dark:bg-secondary overflow-hidden">
-      <div className="bg-amber-300 w-1/2">
+      <div className=" w-1/2">
         <h1>Avatar</h1>
       </div>
-      <div className="bg-violet-400 w-1/2 flex flex-col items-center justify-center">
+      <div className=" w-1/2 flex flex-col items-center justify-center">
         <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
-          <h1 className="text-4xl lg:text-5xl font-bold">Murilo Taborda</h1>
+          <h1 className="text-4xl lg:text-6xl font-bold">Murilo Rodrigues Taborda</h1>
         </motion.div>
         <motion.div
           initial="hidden"
@@ -38,7 +38,7 @@ export const Home = () => {
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
-          className="mt-10 text-lg text-muted-foreground"
+          className="mt-15 text-2xl text-muted-foreground"
         >
           Como Desenvolvedor Front-End, meu objetivo é transformar ideias em
           interfaces <br />
