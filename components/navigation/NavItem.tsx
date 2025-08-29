@@ -12,9 +12,9 @@ export const NavItem = ({ section, onClick }: Props) => {
   return (
     <div
       className={`flex items-center gap-2 pb-1 text-lg font-semibold cursor-pointer border-b-2 border-transparent lg:text-2xl
-        hover:border-blue-500 hover:text-blue-600 transition-all ease-in 
+        hover:border-blue-500 hover:text-primary transition-all ease-in 
         ${
-          currentSection === section.id ? "border-blue-500 text-blue-600" : ""
+          currentSection === section.id ? "border-blue-500 text-primary" : ""
         }`}
       onClick={() => onClick(section.id)}
     >

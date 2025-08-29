@@ -6,6 +6,7 @@ import { AnimatePresence } from "motion/react";
 import { SectionObserver } from "./navigation/SectionObserver";
 import { SectionBarItem } from "./navigation/SectionBarItem";
 import { SectionBar } from "./navigation/SectionBar";
+import { Home } from "./home/Home";
 
 export const MainContainer = () => {
   useEffect(() => {
@@ -18,6 +19,7 @@ export const MainContainer = () => {
         <SectionObserver id="home">
           <div className="min-h-screen">
             <Navbar/>
+            <Home/>
           </div>
         </SectionObserver>
         <SectionBar/>
