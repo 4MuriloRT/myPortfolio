@@ -1,0 +1,68 @@
+import { motion } from "framer-motion";
+import { UserSearchIcon } from "lucide-react";
+import { SectionTitle } from "../default/SectionTitle";
+import { useEffect, useState } from "react";
+import { useSectionStore } from "../stores/useSectionStore";
+import { fadeInUp, slowFadeInLeft } from "@/animations/fadeIn";
+import { education } from "../data/education";
+import { CardEducation } from "./CardEducation";
+import { SubTitle } from "../default/SubTitle";
+
+export const About = () => {
+  const { currentSection, setCurrentSection } = useSectionStore();
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    if (currentSection === "about" && !hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, [currentSection, hasAnimated]);
+  return (
+    <div className="bg-blue-400 dark:bg-secondary px-3 py-10 min-h-screen flex flex-col items-center">
+      <motion.div
+        initial="hidden"
+        animate={hasAnimated ? "visible" : ""}
+        variants={fadeInUp}
+      >
+        <SectionTitle label="Sobre Mim" Icon={UserSearchIcon} />
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        animate={hasAnimated ? "visible" : ""}
+        variants={slowFadeInLeft}
+        className="mt-15 text-lg text-muted-foreground inline-block lg:mt-20 lg:max-w-[1100px] lg:text-2xl"
+      >
+        Olá, sou Murilo Rodrigues Taborda. Há 3 anos, mergulhei no universo da
+        programação e descobri minha vocação: criar e dar vida a interfaces
+        digitais. Nessa jornada, entendi que ser desenvolvedor vai além de
+        escrever código; trata-se de ser um solucionador de problemas,
+        encontrando os caminhos mais elegantes e eficientes para cada desafio.
+        <br />
+        <br />
+        Valorizo profundamente ambientes colaborativos, atuando como uma ponte
+        entre a visão criativa de designers e a lógica de desenvolvedores
+        back-end. Acredito que essa sinergia é fundamental para construir
+        produtos coesos, que atendam tanto aos objetivos de negócio quanto às
+        expectativas dos usuários.
+        <br />
+        <br />
+        Movido por essa mentalidade, estou em um processo contínuo de
+        aprendizado para expandir minhas competências e me tornar um
+        desenvolvedor Full-Stack. Meu objetivo é ter uma visão holística do
+        desenvolvimento para criar aplicações cada vez mais robustas, eficientes
+        e que proporcionem uma experiência de usuário excepcional.
+      </motion.div>
+      <div className="mt-15">
+        <motion.div className="flex flex-col items-center">
+          <SubTitle label="Formação e Experiencias" />
+        </motion.div>
+        {education.map((edu, index) => (
+          <motion.div key={index}>
+            <CardEducation education={edu} />
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+};

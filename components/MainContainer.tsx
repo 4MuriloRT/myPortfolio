@@ -7,6 +7,7 @@ import { SectionObserver } from "./navigation/SectionObserver";
 import { SectionBarItem } from "./navigation/SectionBarItem";
 import { SectionBar } from "./navigation/SectionBar";
 import { Home } from "./home/Home";
+import { About } from "./about/About";
 
 export const MainContainer = () => {
   useEffect(() => {
@@ -18,11 +19,14 @@ export const MainContainer = () => {
       <main className="flex flex-col h-full overflow-hidden">
         <SectionObserver id="home">
           <div className="min-h-screen">
-            <Navbar/>
-            <Home/>
+            <Navbar />
+            <Home />
           </div>
         </SectionObserver>
-        <SectionBar/>
+        <SectionObserver id="about">
+          <About />
+        </SectionObserver>
+        <SectionBar />
       </main>
     </AnimatePresence>
   );
