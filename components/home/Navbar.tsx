@@ -5,6 +5,7 @@ import { Logo } from "../default/Logo";
 import { NavItem } from "../navigation/NavItem";
 import { motion } from "framer-motion";
 import { slowFadeInLeft } from "@/animations/fadeIn";
+import { ModeToggle } from "../theme-toggle";
 
 export const Navbar = () => {
   const { currentSection, setCurrentSection } = useSectionStore();
@@ -38,6 +39,9 @@ export const Navbar = () => {
             />
           ))}
         </nav>
+        <div className="mr-10">
+          <ModeToggle />
+        </div>
       </motion.div>
     </header>
   );
