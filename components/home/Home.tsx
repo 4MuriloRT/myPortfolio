@@ -6,6 +6,7 @@ import { Button } from "../ui/button";
 import { FileUser, ArrowBigDownDashIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useSectionStore } from "../stores/useSectionStore";
+import { BackgroundGradient } from "../ui/background-gradient";
 
 export const Home = () => {
   const { currentSection, setCurrentSection } = useSectionStore();
@@ -34,13 +35,15 @@ export const Home = () => {
         transition={{ type: "spring", stiffness: 300 }}
         className="flex justify-center"
       >
-        <Avatar className="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-150 lg:h-150 border-4 border-sky-500">
-          <AvatarImage
-            src="https://avatars.githubusercontent.com/u/96546157"
-            alt="foto perfil"
-          />
-          <AvatarFallback>MT</AvatarFallback>
-        </Avatar>
+        <BackgroundGradient>
+          <Avatar className="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-150 lg:h-150 ">
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/96546157"
+              alt="foto perfil"
+            />
+            <AvatarFallback>MT</AvatarFallback>
+          </Avatar>
+        </BackgroundGradient>
       </motion.div>
 
       <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
