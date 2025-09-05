@@ -3,10 +3,11 @@ import { UserSearchIcon } from "lucide-react";
 import { SectionTitle } from "../default/SectionTitle";
 import { useEffect, useState } from "react";
 import { useSectionStore } from "../stores/useSectionStore";
-import { fadeInUp, slowFadeInLeft } from "@/animations/fadeIn";
+import { fadeInUp, slowFadeInLeft, slowFadeInRight } from "@/animations/fadeIn";
 import { education } from "../data/education";
 import { CardEducation } from "./CardEducation";
 import { SubTitle } from "../default/SubTitle";
+import { BackgroundGradientForm } from "../ui/background-gradient-formacao";
 
 export const About = () => {
   const { currentSection, setCurrentSection } = useSectionStore();
@@ -54,7 +55,12 @@ export const About = () => {
         e que proporcionem uma experiência de usuário excepcional.
       </motion.div>
       <div className="mt-15">
-        <motion.div className="flex justify-center gap-4 items-center">
+        <motion.div
+          initial="hidden"
+          animate={hasAnimated ? "visible" : ""}
+          variants={slowFadeInRight}
+          className="flex justify-center gap-4 items-center"
+        >
           <SubTitle label="Formações" color="#6959CD" />
           <SubTitle label="&" color="" />
           <SubTitle label="Experiencias" color="#48D1CC" />
@@ -64,9 +70,12 @@ export const About = () => {
             initial="hidden"
             animate={hasAnimated ? "visible" : ""}
             variants={slowFadeInLeft}
+            className="mb-10"
             key={index}
           >
-            <CardEducation education={edu} />
+            <BackgroundGradientForm>
+              <CardEducation education={edu} />
+            </BackgroundGradientForm>
           </motion.div>
         ))}
       </div>
