@@ -26,7 +26,7 @@ export const CardEducation = ({ education }: Props) => {
           </span>
         </CardContent>
 
-        <CardContent className="text-muted-foreground text-lg leading-relaxed">
+        <CardContent className="text-muted-foreground text-lg leading-relaxed break-words max-w-2xl">
           <p>{education.description}</p>
         </CardContent>
       </Card>

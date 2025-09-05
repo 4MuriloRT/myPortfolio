@@ -5,18 +5,18 @@ export const education: Education[] = [
         course: 'Técnico em Informática Integrado ao Ensino Médio',
         institution: 'IFNMG - Campus Arinos',
         period: '2019 - 2022',
-        description: 'Qualificação que integra o Ensino Médio com as competências técnicas essenciais da área de informática.',
+        description: 'Formação técnica integrada ao Ensino Médio, com ênfase em fundamentos de informática e tecnologias da informação.',
     },
     {
         course: 'Bacharelado em Sistemas de Informação',
         institution: 'IFNMG - Campus Arinos',
         period: '2022 - Cursando',
-        description: 'Ensino Superior focado em desenvolvimento de software, banco de dados e redes.',
+        description: 'Graduação com foco em desenvolvimento de software, engenharia de dados, redes de computadores e gestão de sistemas de informação.',
     },
     {
         course: "AWS Academy Cloud Foundations",
         institution: "AWS Academy",
         period: "2024 - 2025",
-        description:"Curso introdutório sobre os fundamentos da computação em nuvem e serviços da AWS.",
+        description:"Capacitação introdutória em computação em nuvem, abordando conceitos fundamentais e principais serviços da AWS.",
     },
 ]

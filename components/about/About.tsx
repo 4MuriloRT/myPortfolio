@@ -5,9 +5,11 @@ import { useEffect, useState } from "react";
 import { useSectionStore } from "../stores/useSectionStore";
 import { fadeInUp, slowFadeInLeft, slowFadeInRight } from "@/animations/fadeIn";
 import { education } from "../data/education";
+import { experiences } from "../data/experiences";
 import { CardEducation } from "./CardEducation";
 import { SubTitle } from "../default/SubTitle";
 import { BackgroundGradientForm } from "../ui/background-gradient-formacao";
+import { BackgroundGradientExpi } from "../ui/background-gradient-experience";
 
 export const About = () => {
   const { currentSection, setCurrentSection } = useSectionStore();
@@ -63,21 +65,40 @@ export const About = () => {
         >
           <SubTitle label="Formações" color="#6959CD" />
           <SubTitle label="&" color="" />
-          <SubTitle label="Experiencias" color="#48D1CC" />
+          <SubTitle label="Experiências" color="#48D1CC" />
         </motion.div>
-        {education.map((edu, index) => (
-          <motion.div
-            initial="hidden"
-            animate={hasAnimated ? "visible" : ""}
-            variants={slowFadeInLeft}
-            className="mb-10"
-            key={index}
-          >
-            <BackgroundGradientForm>
-              <CardEducation education={edu} />
-            </BackgroundGradientForm>
-          </motion.div>
-        ))}
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div>
+          {education.map((edu, index) => (
+            <motion.div
+              initial="hidden"
+              animate={hasAnimated ? "visible" : ""}
+              variants={slowFadeInLeft}
+              className="mb-10"
+              key={index}
+            >
+              <BackgroundGradientForm>
+                <CardEducation education={edu} />
+              </BackgroundGradientForm>
+            </motion.div>
+          ))}
+        </div>
+        <div>
+          {experiences.map((exp, index) => (
+            <motion.div
+              initial="hidden"
+              animate={hasAnimated ? "visible" : ""}
+              variants={slowFadeInRight}
+              key={index}
+              className="mb-10"
+            >
+              <BackgroundGradientExpi>
+                <CardEducation education={exp} />
+              </BackgroundGradientExpi>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );
