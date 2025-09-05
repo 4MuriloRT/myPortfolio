@@ -36,7 +36,7 @@ export const About = () => {
         Olá, sou Murilo Rodrigues Taborda. Há 3 anos, mergulhei no universo da
         programação e descobri minha vocação: criar e dar vida a interfaces
         digitais. Nessa jornada, entendi que ser desenvolvedor vai além de
-        escrever código; trata-se de ser um solucionador de problemas,
+        escrever código, trata-se de ser um solucionador de problemas,
         encontrando os caminhos mais elegantes e eficientes para cada desafio.
         <br />
         <br />
@@ -54,11 +54,18 @@ export const About = () => {
         e que proporcionem uma experiência de usuário excepcional.
       </motion.div>
       <div className="mt-15">
-        <motion.div className="flex flex-col items-center">
-          <SubTitle label="Formação e Experiencias" />
+        <motion.div className="flex justify-center gap-4 items-center">
+          <SubTitle label="Formações" color="#6959CD" />
+          <SubTitle label="&" color="" />
+          <SubTitle label="Experiencias" color="#48D1CC" />
         </motion.div>
         {education.map((edu, index) => (
-          <motion.div key={index}>
+          <motion.div
+            initial="hidden"
+            animate={hasAnimated ? "visible" : ""}
+            variants={slowFadeInLeft}
+            key={index}
+          >
             <CardEducation education={edu} />
           </motion.div>
         ))}

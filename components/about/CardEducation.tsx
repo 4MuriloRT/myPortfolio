@@ -7,17 +7,25 @@ type Props = {
 
 export const CardEducation = ({ education }: Props) => {
   return (
-    <Card className="space-y-6 mb-10">
-      <CardHeader>
-        <CardTitle className="inline-flex mx-auto  text-2xl border-b-3 border-primary">
+    <Card
+      className={
+        "flex mb-6 border-l-4 border-violet-400 rounded-xl bg-background"
+      }
+    >
+      <CardHeader className="flex justify-center pb-2">
+        <CardTitle className="text-2xl font-semibold text-foreground border-b-2 border-violet-300">
           {education.course}
         </CardTitle>
       </CardHeader>
-      <CardContent className="flex justify-between  text-muted-foreground pa ml-10 text-xl font-bold">
-        <span>{education.institution}</span>
-        <span>{education.period}</span>
+
+      <CardContent className="flex justify-between items-center text-muted-foreground font-medium">
+        <span className="text-xl">{education.institution}</span>
+        <span className="text-lg text-primary font-semibold">
+          {education.period}
+        </span>
       </CardContent>
-      <CardContent className=" flex  text-muted-foreground text-lg">
+
+      <CardContent className="text-muted-foreground text-sm leading-relaxed">
         <p>{education.description}</p>
       </CardContent>
     </Card>
