@@ -8,6 +8,7 @@ import { SectionBarItem } from "./navigation/SectionBarItem";
 import { SectionBar } from "./navigation/SectionBar";
 import { Home } from "./home/Home";
 import { About } from "./about/About";
+import { Projects } from "./projects/Projects";
 
 export const MainContainer = () => {
   useEffect(() => {
@@ -25,6 +26,9 @@ export const MainContainer = () => {
         </SectionObserver>
         <SectionObserver id="about">
           <About />
+        </SectionObserver>
+        <SectionObserver id="projects">
+          <Projects/>
         </SectionObserver>
         <SectionBar />
       </main>
