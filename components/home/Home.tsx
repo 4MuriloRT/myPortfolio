@@ -2,11 +2,11 @@ import { Typewriter } from "react-simple-typewriter";
 import { motion } from "motion/react";
 import { fadeInUp, slowFadeInLeft } from "@/animations/fadeIn";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { Button } from "../ui/button";
 import { FileUser, ArrowBigDownDashIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useSectionStore } from "../stores/useSectionStore";
 import { BackgroundGradient } from "../ui/background-gradient";
+import { AnimatedButton } from "@/components/ui/animated-button";
 
 export const Home = () => {
   const { currentSection, setCurrentSection } = useSectionStore();
@@ -96,9 +96,21 @@ export const Home = () => {
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
-          <Button
-            className="text-lg sm:text-xl md:text-2xl h-12 sm:h-14 w-48 sm:w-60 p-4 mt-3 font-bold bg-blue-500 shadow-lg shadow-blue-500/50"
-            asChild
+          <AnimatedButton
+            className="text-lg sm:text-xl md:text-2xl h-12 sm:h-14 w-48 sm:w-60 p-4 mt-3 font-bold bg-blue-500 text-white"
+            variant="default"
+            size="default"
+            glow={true}
+            textEffect="normal"
+            uppercase={true}
+            rounded="custom"
+            asChild={false}
+            hideAnimations={false}
+            shimmerColor="#1784af"
+            shimmerSize="0.15em"
+            shimmerDuration="3s"
+            borderRadius="100px"
+            background="#030d14"
           >
             <a
               href="/Curriculo Desenvolvedor - Murilo Taborda.pdf"
@@ -108,7 +120,7 @@ export const Home = () => {
               Baixar CV
               <FileUser style={{ width: "30px", height: "30px" }} />
             </a>
-          </Button>
+          </AnimatedButton>
         </motion.div>
       </div>
       <div

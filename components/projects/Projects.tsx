@@ -2,7 +2,7 @@ import { SectionTitle } from "../default/SectionTitle";
 import { MonitorCog } from "lucide-react";
 import { useSectionStore } from "../stores/useSectionStore";
 import { useEffect, useState } from "react";
-import Carousel from "../ui/carousel";
+import Carousel from "../ui/carousel2";
 import { slideData } from "../data/projects";
 
 export const Projects = () => {
