@@ -7,7 +7,7 @@ export const slideData : Projects[] = [
         type: "Full-Stack",
         src:"/clincplus/Carrossel ClincPlus.png",
         technologies: ["React","Next.js","TailwindCSS", "Zod", "Shadcn-ui", "Node.js", "DrizzleORM"],
-        images: ["/clincplus/ClincPlus.png"],
+        image: "/clincplus/ClincPlus.png",
         links:{
             frontend: "https://github.com/4MuriloRT/clinic-plus",
             backend: "https://github.com/4MuriloRT/clinic-plus",

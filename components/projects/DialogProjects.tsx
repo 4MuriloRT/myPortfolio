@@ -36,7 +36,7 @@ export const DialogProjects = ({ slide }: Props) => {
           {/* Conteúdo rolável */}
           <div className="overflow-y-auto px-4 sm:px-6 py-4 space-y-6 w-full">
             <div className="w-full flex overflow-hidden justify-center items-center">
-              <Image width={500} height={500} src={slide.images[0]} alt={slide.title} />
+              <Image width={500} height={500} src={slide.image} alt={slide.title} />
             </div>
             <div className="space-y-5">
               <DialogDescription className="break-words text-wrap text-sm sm:text-base">
