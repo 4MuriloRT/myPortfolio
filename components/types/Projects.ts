@@ -4,6 +4,7 @@ export type Projects = {
     type: string;
     src: string;
     technologies: string[];
+    images: string[];
     links: {
         frontend?: string;
         backend?: string;

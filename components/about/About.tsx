@@ -34,7 +34,7 @@ export const About = () => {
         initial="hidden"
         animate={hasAnimated ? "visible" : ""}
         variants={slowFadeInLeft}
-        className="mt-15 text-lg text-muted-foreground inline-block lg:mt-20 lg:max-w-[1100px] lg:text-2xl"
+        className="mt-10 text-sm text-muted-foreground inline-block lg:mt-10 lg:max-w-[1080px] lg:text-xl"
       >
         Olá, sou Murilo Rodrigues Taborda. Há 3 anos, mergulhei no universo da
         programação e descobri minha vocação: criar e dar vida a interfaces

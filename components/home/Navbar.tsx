@@ -27,7 +27,7 @@ export const Navbar = () => {
         variants={slowFadeInLeft}
         className="flex items-center justify-between transition-all ease-in"
       >
-        <div className="h-20 flex items-center mx-auto px-4">
+        <div className="h-15 flex items-center mx-auto px-4">
           <Logo />
         </div>
         <nav className="flex items-center space-x-7 mx-auto">

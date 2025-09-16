@@ -36,7 +36,7 @@ export const Home = () => {
         className="flex justify-center"
       >
         <BackgroundGradient>
-          <Avatar className="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-150 lg:h-150 ">
+          <Avatar className="w-38 h-38 sm:w-60 sm:h-60 md:w-82 md:h-82 lg:w-100 lg:h-100 ">
             <AvatarImage
               src="https://avatars.githubusercontent.com/u/96546157"
               alt="foto perfil"
@@ -48,7 +48,7 @@ export const Home = () => {
 
       <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
         <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
             Murilo Rodrigues Taborda
           </h1>
         </motion.div>
@@ -57,7 +57,7 @@ export const Home = () => {
           initial="hidden"
           animate="visible"
           variants={slowFadeInLeft}
-          className="text-primary font-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl"
+          className="text-primary font-bold text-lg sm:text-2lg md:text-xl lg:text-2xl"
         >
           <Typewriter
             words={[
@@ -80,7 +80,7 @@ export const Home = () => {
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
-          className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-xl"
+          className="text-base sm:text-sm md:text-lg lg:text-xl text-muted-foreground max-w-xl"
         >
           Desenvolvedor Front-End especialista em criar interfaces intuitivas e
           de alta performance com React.js, Next.js, TypeScript e Tailwind. Com
@@ -97,7 +97,7 @@ export const Home = () => {
           transition={{ type: "spring", stiffness: 300 }}
         >
           <AnimatedButton
-            className="text-lg sm:text-xl md:text-2xl h-12 sm:h-14 w-48 sm:w-60 p-4 mt-3 font-bold bg-blue-500 text-white"
+            className="text-lg sm:text-xl md:text-sm h-12 sm:h-10 w-48 sm:w-40 p-4 mt-3 font-bold bg-blue-500 text-white"
             variant="default"
             size="default"
             glow={true}
@@ -118,7 +118,7 @@ export const Home = () => {
               className="flex items-center justify-center gap-2"
             >
               Baixar CV
-              <FileUser style={{ width: "30px", height: "30px" }} />
+              <FileUser style={{ width: "20px", height: "20px" }} />
             </a>
           </AnimatedButton>
         </motion.div>
