@@ -1,24 +1,38 @@
+import { motion } from "framer-motion";
 import { SectionTitle } from "../default/SectionTitle";
 import { MonitorCog } from "lucide-react";
 import { useSectionStore } from "../stores/useSectionStore";
 import { useEffect, useState } from "react";
-import Carousel from "../ui/carousel2";
+import Carousel from "../ui/carousel";
 import { slideData } from "../data/projects";
+import { fadeInDown, fadeInUp } from "@/animations/fadeIn";
 
 export const Projects = () => {
   const { currentSection, setCurrentSection } = useSectionStore();
   const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
-    if (currentSection === "about" && !hasAnimated) {
+    if (currentSection === "projects" && !hasAnimated) {
       setHasAnimated(true);
     }
   }, [currentSection, hasAnimated]);
   return (
     <div className="bg-blue-400 dark:bg-secondary px-3 py-10 min-h-screen flex flex-col items-center">
-      <SectionTitle label="Projetos" Icon={MonitorCog} />
+      <motion.div
+        initial="hidden"
+        animate={hasAnimated ? "visible" : ""}
+        variants={fadeInUp}
+      >
+        <SectionTitle label="Projetos" Icon={MonitorCog} />
+      </motion.div>
       <div className="relative overflow-hidden w-full h-full py-20">
-        <Carousel slides={slideData}/> 
+        <motion.div
+          initial="hidden"
+          animate={hasAnimated ? "visible" : ""}
+          variants={fadeInDown}
+        >
+          <Carousel slides={slideData} />
+        </motion.div>
       </div>
     </div>
   );

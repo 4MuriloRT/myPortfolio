@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SlideData } from "../ui/carousel2";
+import { SlideData } from "../ui/carousel";
 import {
   Dialog,
   DialogClose,

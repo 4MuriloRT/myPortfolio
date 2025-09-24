@@ -9,6 +9,7 @@ import { SectionBar } from "./navigation/SectionBar";
 import { Home } from "./home/Home";
 import { About } from "./about/About";
 import { Projects } from "./projects/Projects";
+import { Skills } from "./skill/Skills";
 
 export const MainContainer = () => {
   useEffect(() => {
@@ -29,6 +30,9 @@ export const MainContainer = () => {
         </SectionObserver>
         <SectionObserver id="projects">
           <Projects/>
+        </SectionObserver>
+        <SectionObserver id="skills">
+          <Skills/>
         </SectionObserver>
         <SectionBar />
       </main>
