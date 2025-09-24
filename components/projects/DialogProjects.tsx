@@ -24,16 +24,14 @@ export const DialogProjects = ({ slide }: Props) => {
           {slide.button}
         </Button>
       </DialogTrigger>
+      
       <DialogContent className="w-full max-w-[95vw] md:min-w-full lg:min-w-[800px] p-0 bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#111111] text-white">
-        <div className="max-h-[95vh] flex flex-col overflow-x-hidden">
-          {/* Cabeçalho fixo */}
+        <div className="max-h-[95vh] flex flex-col overflow-x-hidden">   
           <DialogHeader className="p-6 border-b border-border sticky top-0 z-10 flex-row justify-between">
             <DialogTitle className="text-wrap break-words">
               {slide.title}
             </DialogTitle>
           </DialogHeader>
-
-          {/* Conteúdo rolável */}
           <div className="overflow-y-auto px-4 sm:px-6 py-4 space-y-6 w-full">
             <div className="w-full flex overflow-hidden justify-center items-center">
               <Image width={500} height={500} src={slide.image} alt={slide.title} />
