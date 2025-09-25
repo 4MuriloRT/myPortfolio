@@ -11,6 +11,13 @@ export const Skills = () => {
   const { currentSection, setCurrentSection } = useSectionStore();
   const [hasAnimated, setHasAnimated] = useState(false);
 
+  const bgByGroup: Record<string, string> = {
+    frontend: "bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-600",
+    backend: "bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600",
+    corporate: "bg-gradient-to-br from-pink-600 via-orange-500 to-red-500",
+    other: "bg-gradient-to-br from-gray-600 via-slate-700 to-zinc-900",
+  };
+
   useEffect(() => {
     if (currentSection === "skills" && !hasAnimated) {
       setHasAnimated(true);
@@ -26,7 +33,7 @@ export const Skills = () => {
         <SectionTitle label="Habilidades" Icon={ChartNetworkIcon} />
       </motion.div>
 
-      <div className="max-w-5xl w-full items-start justify-start my-10">
+      <div className="  md:h-[50rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-10">
         <Tabs tabs={tabs} />
       </div>
     </div>
