@@ -117,7 +117,7 @@ export const FadeInDiv = ({
           }}
           className={cn("w-full h-full absolute top-0 left-0", className)}
         >
-          <div className="bg-blue-600 min-h-full">{tab.content}</div>
+          <div className="bg-blue-600 min-h-full rounded-3xl pt-10">{tab.content}</div>
         </motion.div>
       ))}
     </div>

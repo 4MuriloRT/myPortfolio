@@ -17,7 +17,7 @@ export const Projects = () => {
     }
   }, [currentSection, hasAnimated]);
   return (
-    <div className="bg-blue-400 dark:bg-secondary px-3 py-10 min-h-screen flex flex-col items-center">
+    <div className="px-3 py-10 min-h-screen flex flex-col items-center">
       <motion.div
         initial="hidden"
         animate={hasAnimated ? "visible" : ""}

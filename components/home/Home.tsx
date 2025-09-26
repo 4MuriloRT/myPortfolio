@@ -26,7 +26,7 @@ export const Home = () => {
   }, [currentSection, hasAnimated]);
 
   return (
-    <div className="relative w-full min-h-screen bg-blue-400 dark:bg-secondary overflow-hidden grid grid-cols-1 lg:grid-cols-2 gap-10 px-6 md:px-16 lg:px-32 items-center">
+    <div className="relative w-full min-h-screen  overflow-hidden grid grid-cols-1 lg:grid-cols-2 gap-10 px-6 md:px-16 lg:px-32 items-center">
       <motion.div
         initial="hidden"
         animate="visible"

@@ -24,7 +24,7 @@ export const Skills = () => {
     }
   }, [currentSection, hasAnimated]);
   return (
-    <div className="bg-blue-400 dark:bg-secondary px-3 py-10 min-h-screen flex flex-col items-center">
+    <div className="px-3 py-10 mb-10 min-h-screen flex flex-col items-center">
       <motion.div
         initial="hidden"
         animate={hasAnimated ? "visible" : ""}
@@ -33,9 +33,14 @@ export const Skills = () => {
         <SectionTitle label="Habilidades" Icon={ChartNetworkIcon} />
       </motion.div>
 
-      <div className="  md:h-[50rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-10">
+      <motion.div
+        initial="hidden"
+        animate={hasAnimated ? "visible" : ""}
+        variants={fadeInUp}
+        className="  md:h-[50rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-10"
+      >
         <Tabs tabs={tabs} />
-      </div>
+      </motion.div>
     </div>
   );
 };

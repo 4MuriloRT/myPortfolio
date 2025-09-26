@@ -7,8 +7,8 @@ import { FocusCards } from "../ui/focus-cards";
 const groups = [
   { title: "Tecnologias Front-end", value: "frontend" },
   { title: "Tecnologias Back-end", value: "backend" },
-  { title: "Corporate", value: "corporate" },
-  { title: "Other", value: "other" },
+  { title: "Outras Tecnologias", value: "other" },
+  { title: "Habilidades Corporativas", value: "corporate" },
 ];
 
 export const tabs = groups.map((group) => ({
