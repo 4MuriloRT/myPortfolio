@@ -24,7 +24,7 @@ export const Skills = () => {
     }
   }, [currentSection, hasAnimated]);
   return (
-    <div className="px-3 py-10 mb-10 min-h-screen flex flex-col items-center">
+    <div className="px-3 py-12 mb-10 min-h-screen flex flex-col items-center">
       <motion.div
         initial="hidden"
         animate={hasAnimated ? "visible" : ""}
