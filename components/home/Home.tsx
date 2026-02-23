@@ -33,10 +33,10 @@ export const Home = () => {
         variants={fadeInUp}
         whileHover={{ scale: 1.05 }}
         transition={{ type: "spring", stiffness: 300 }}
-        className="flex justify-center"
+        className="flex justify-center mt-20 lg:mt-0"
       >
         <BackgroundGradient>
-          <Avatar className="w-38 h-38 sm:w-60 sm:h-60 md:w-82 md:h-82 lg:w-100 lg:h-100 ">
+          <Avatar className="w-48 h-48 sm:w-60 sm:h-60 md:w-82 md:h-82 lg:w-100 lg:h-100 ">
             <AvatarImage
               src="https://avatars.githubusercontent.com/u/96546157"
               alt="foto perfil"
@@ -46,7 +46,7 @@ export const Home = () => {
         </BackgroundGradient>
       </motion.div>
 
-      <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
+      <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 pb-40 lg:p-0">
         <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
             Murilo Rodrigues Taborda
@@ -124,10 +124,11 @@ export const Home = () => {
         </motion.div>
       </div>
       <div
-        className="flex justify-end w-full relative left-19 cursor-pointer animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer animate-bounce flex flex-col items-center opacity-70 hover:opacity-100 transition-opacity"
         onClick={handleScrollToNextSection}
       >
-        <ArrowBigDownDashIcon size={90} />
+        <span className="text-[10px] uppercase tracking-widest mb-2 md:text-[15px]">Sobre</span>
+        <ArrowBigDownDashIcon className="w-12 h-12 md:w-20 md:h-20" />
       </div>
     </div>
   );
