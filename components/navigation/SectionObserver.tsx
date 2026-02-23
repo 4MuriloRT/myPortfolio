@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSectionStore } from "../stores/useSectionStore";
 import { Section } from "../types/Section";
-import { motion } from "framer-motion";
 
 type SectionProps = {
   id: Section["id"];
@@ -11,33 +10,29 @@ type SectionProps = {
 export const SectionObserver = ({ id, children }: SectionProps) => {
   const setCurrentSection = useSectionStore((state) => state.setCurrentSection);
   const sectionRef = useRef<HTMLDivElement | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const currentSectionRef = sectionRef.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setTimeout(() => {
-          if (entry.isIntersecting) {
-            setCurrentSection(id);
-            setIsVisible(true);
-          } else {
-            setIsVisible(false);
-          }
-        }, 100);
+        if (entry.isIntersecting) {
+          setCurrentSection(id);
+        }
       },
       {
-        threshold: window.innerWidth <= 768 ? 0.1 : [0.2, 1],
+        threshold: 0.2, // Simplificado para evitar erros de renderização
         rootMargin: "0px 0px -20% 0px",
       }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (currentSectionRef) {
+      observer.observe(currentSectionRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSectionRef) {
+        observer.unobserve(currentSectionRef);
       }
     };
   }, [id, setCurrentSection]);

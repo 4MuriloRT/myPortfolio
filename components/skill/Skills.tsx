@@ -10,7 +10,7 @@ import { skills } from "../data/skills";
 import { FocusCards } from "../ui/focus-cards";
 
 export const Skills = () => {
-  const { currentSection, setCurrentSection } = useSectionStore();
+  const { currentSection } = useSectionStore();
   const [hasAnimated, setHasAnimated] = useState(false);
   const [activeTab, setActiveTab] = useState("frontend");
 

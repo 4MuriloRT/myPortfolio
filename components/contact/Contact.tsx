@@ -9,7 +9,7 @@ import { SocialMediaArea } from "./SocialMediaArea";
 
 
 export const Contact = () => {
-  const { currentSection, setCurrentSection } = useSectionStore();
+  const { currentSection } = useSectionStore();
   const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {

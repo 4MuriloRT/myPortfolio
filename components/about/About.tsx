@@ -12,7 +12,7 @@ import { BackgroundGradientForm } from "../ui/background-gradient-formacao";
 import { BackgroundGradientExpi } from "../ui/background-gradient-experience";
 
 export const About = () => {
-  const { currentSection, setCurrentSection } = useSectionStore();
+  const { currentSection } = useSectionStore();
   const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {

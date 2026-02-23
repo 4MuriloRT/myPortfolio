@@ -8,7 +8,7 @@ import { slideData } from "../data/projects";
 import { fadeInDown, fadeInUp } from "@/animations/fadeIn";
 
 export const Projects = () => {
-  const { currentSection, setCurrentSection } = useSectionStore();
+  const { currentSection } = useSectionStore();
   const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {

@@ -9,7 +9,7 @@ import { BackgroundGradient } from "../ui/background-gradient";
 import { AnimatedButton } from "@/components/ui/animated-button";
 
 export const Home = () => {
-  const { currentSection, setCurrentSection } = useSectionStore();
+  const { currentSection } = useSectionStore();
   const [hasAnimated, setHasAnimated] = useState(false);
 
   const handleScrollToNextSection = () => {
