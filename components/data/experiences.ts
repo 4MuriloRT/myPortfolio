@@ -19,4 +19,10 @@ export const experiences : Education[] = [
         period: "2025 - Atualmente",
         description:"Responsável pelo desenvolvimento de aplicações web e mobile, contribuindo para a presença digital da instituição.",
     },
+    {
+        course: "Suporte Tecnico - 7System",
+        institution: "Atuação: Contratado",
+        period: "2025 - Atualmente",
+        description:"Responsável por suporte técnico a usuários, manutenção de sistemas, diagnóstico e resolução de problemas de hardware e software.",
+    },
 ]
