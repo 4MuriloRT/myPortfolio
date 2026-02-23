@@ -63,7 +63,6 @@ export const Skills = () => {
           ))}
         </div>
 
-        {/* Lista de Cards Simples */}
         <div className="w-full">
           <FocusCards
             cards={skills

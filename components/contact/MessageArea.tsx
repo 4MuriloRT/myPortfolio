@@ -1,6 +1,5 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { DefaultButton } from "../default/DefaultButton";
-import { AnimatedButton } from "../ui/animated-button";
 
 export const MessageArea = () => {
     const handleSendMessage = () =>{

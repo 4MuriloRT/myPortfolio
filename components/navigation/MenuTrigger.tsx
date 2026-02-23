@@ -17,7 +17,7 @@ import { useSectionStore } from "../stores/useSectionStore";
 import { useState } from "react";
 
 export const MenuTrigger = () => {
-  const { currentSection, setCurrentSection } = useSectionStore();
+  const { setCurrentSection } = useSectionStore();
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const handleScrollToSection = (sectionId: Section["id"]) => {

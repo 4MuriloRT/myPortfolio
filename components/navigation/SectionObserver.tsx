@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { useSectionStore } from "../stores/useSectionStore";
 import { Section } from "../types/Section";
 
@@ -21,7 +21,7 @@ export const SectionObserver = ({ id, children }: SectionProps) => {
         }
       },
       {
-        threshold: 0.2, // Simplificado para evitar erros de renderização
+        threshold: 0.2, 
         rootMargin: "0px 0px -20% 0px",
       }
     );
