@@ -11,7 +11,7 @@ export const slideData : Projects[] = [
         links:{
             frontend: "https://github.com/4MuriloRT/clinic-plus",
             backend: "https://github.com/4MuriloRT/clinic-plus",
-            deploy: "doutor-agenda-plum.vercel.app",
+            deploy: "https://doutor-agenda-plum.vercel.app/",
         },
         button: "Ver Mais",
     },
